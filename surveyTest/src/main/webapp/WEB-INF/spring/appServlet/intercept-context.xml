@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<mvc:interceptors>
+	<mvc:interceptor>
+		<mvc:mapping path="/survey" />
+		<bean class = "co.gukjin.surveytest.MyInterceptClass" />
+	</mvc:interceptor>
+</mvc:interceptors>
+
+
+<!-- 
+	aop : 과정 가운데 끼어들기
+	interceptor : 과정 가운데 가로채서 지꺼 실행하기
+ -->
+</beans>
